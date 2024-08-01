@@ -47,7 +47,7 @@ builder.Services.AddCors(options =>
     {
         builder.WithOrigins(
                 "http://localhost:4200",
-                "https://frontend-vehicle.vercel.app"
+                "https://vehicle-frontend.vercel.app"
             )
             .AllowAnyHeader()
             .AllowAnyMethod()
