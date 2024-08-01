@@ -17,22 +17,35 @@ namespace vechicalManagement.Controllers
             _context = context;
         }
         [HttpPost("invoice")]
-        public async Task<IActionResult> invoice(int vehicleId, [FromBody] ServiceRecord records )
+        public async Task<IActionResult> invoice([FromQuery] int vehicleId, [FromBody] ServiceRecord records )
         {
-            var workItemUsedInVehicle = _context.WorkItems.
+            try
+            {
+                var workItemUsedInVehicle = _context.WorkItems.
                 FirstOrDefault(u => u.VehicleId == vehicleId);
-           
-            records.VehicleId = vehicleId;
+                var vehicle = _context.Vehicles.FirstOrDefault(u => u.Id == vehicleId);
+                if (vehicle == null)
+                {
+                    return NotFound();
+                }
+                records.vehicleName = vehicle.VehicleName;
+
+                records.Price = workItemUsedInVehicle.Cost;
+                records.WorkItemId = workItemUsedInVehicle.Id;
+
+
+                _context.serviceRecords.Add(records);
+                await _context.SaveChangesAsync();
+
+
+                return Ok();
+
+            }
+            catch (Exception ex) { 
+            return Ok(ex.ToString());
+                    }
             
-            records.Price = workItemUsedInVehicle.Cost;
-            records.WorkItemId = workItemUsedInVehicle.Id;
-
-
-            _context.serviceRecords.Add(records);
-            await _context.SaveChangesAsync();
             
-
-            return Ok();
         }
       
 

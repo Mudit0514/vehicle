@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5D2ZKJ6xR0+TnmClJhkEyQAAAAACAAAAAAAQZgAAAAEAACAAAADg2gNUe/Tlw0sHRVv661rRxfXFZIeKJ/VFWfDBRnokLQAAAAAOgAAAAAIAACAAAAAkAIENfz7lxLnjOghNNAbRS9k71QBD1PCFaiLlECnk7IAAAAA79ygsjEg2Lss/7ZERxG4lW9sbbM2q4T7FOc5DAV8ASod1gxwPhTw1UXR0bXLDHmiUyMlT63m886dsdmNNNY85Mx/1LL2m2SWeTTArQGUkwLP4/iuU841vZQPyLv1d2aLiIj5+wQIxT1OWkfKKcw5vc5JBywECFulEP78Ev+fwOEAAAACU3dSx/bbReFZ+f8eXDkJir1TiXQith/4PoxgKdWcG5u1FEaZrezGK0QgP+xojki5G9W0AShrjVQi+pukFZkNd</EncryptedPassword>
+    <History>True|2024-08-01T20:11:25.5360438Z||;True|2024-08-02T01:33:58.2460543+05:30||;True|2024-08-02T00:53:26.7520793+05:30||;True|2024-07-30T22:11:37.8489254+05:30||;True|2024-07-30T02:34:56.3860782+05:30||;True|2024-07-30T00:17:29.8816628+05:30||;True|2024-07-29T23:49:18.5953151+05:30||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="vechicalManagement.Data.ApplicationDbContext">
+      <Value>Data Source=vechicalmanagementdbserver4.database.windows.net,1433%3bInitial Catalog=vechicalManagement_db%3bUser ID=vehicle4%3bPassword=Mudit%402001</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

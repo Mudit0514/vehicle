@@ -41,6 +41,20 @@ namespace vechicalManagement.Controllers
             }
             return Ok(vehicles);
         }
+        [HttpDelete("deleteVehicle")]
+
+        public async Task<IActionResult> deleteVehicle([FromQuery] int id)
+        {
+            var vehicle = _context.serviceRecords.Find(id);
+            if (vehicle == null) {
+                return BadRequest();
+                    }
+            _context.serviceRecords.Remove(vehicle);
+
+            await _context.SaveChangesAsync();
+            return Ok();
+
+        }
 
     }
 }

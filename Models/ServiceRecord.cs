@@ -5,7 +5,7 @@ namespace vechicalManagement.Models
     public class ServiceRecord
     {
         public int Id { get; set; }
-        public int VehicleId { get; set; }
+        public string vehicleName { get; set; }
 
         public DateTime ServiceDate { get; set; }
 
